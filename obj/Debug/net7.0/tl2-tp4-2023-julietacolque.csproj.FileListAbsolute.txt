@@ -31,3 +31,36 @@ D:\Facultad\2A 2-Cuatrimestre\Taller II\Practicos\tl2-tp4-2023-julietacolque\obj
 D:\Facultad\2A 2-Cuatrimestre\Taller II\Practicos\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.pdb
 D:\Facultad\2A 2-Cuatrimestre\Taller II\Practicos\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.genruntimeconfig.cache
 D:\Facultad\2A 2-Cuatrimestre\Taller II\Practicos\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\ref\tl2-tp4-2023-julietacolque.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\appsettings.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\tl2-tp4-2023-julietacolque.exe
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\tl2-tp4-2023-julietacolque.deps.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\tl2-tp4-2023-julietacolque.runtimeconfig.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\tl2-tp4-2023-julietacolque.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\tl2-tp4-2023-julietacolque.pdb
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.csproj.AssemblyReference.cache
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.AssemblyInfoInputs.cache
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.AssemblyInfo.cs
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets\msbuild.tl2-tp4-2023-julietacolque.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets\msbuild.build.tl2-tp4-2023-julietacolque.props
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.tl2-tp4-2023-julietacolque.props
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.tl2-tp4-2023-julietacolque.props
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\scopedcss\bundle\tl2-tp4-2023-julietacolque.styles.css
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.csproj.CopyComplete
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\refint\tl2-tp4-2023-julietacolque.dll
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.pdb
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\tl2-tp4-2023-julietacolque.genruntimeconfig.cache
+C:\Users\Alumno\tp4Taller\tl2-tp4-2023-julietacolque\obj\Debug\net7.0\ref\tl2-tp4-2023-julietacolque.dll

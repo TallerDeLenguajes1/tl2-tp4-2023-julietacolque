@@ -22,19 +22,38 @@ namespace Web_Api
             return CadeteriaSingleton;
         }
 
+        // public Cadeteria()
+        // {
+        //     ListaPedidos = new();
+        //     ListaCadetes = new();
+        // }
+
+        // public Cadeteria(string nombre, string telefono)
+        // {
+        //     Nombre = nombre;
+        //     Telefono = telefono;
+        //     ListaCadetes = new();
+        //     ListaPedidos = new();
+        //     Cadete cadete= new(1,"as","asdasd");
+        //     ListaCadetes.Add(cadete);
+            
+        // }
+
         public Cadeteria()
         {
-            ListaPedidos = new();
-            ListaCadetes = new();
+            ListaPedidos = new List<Pedido>();
+            ListaCadetes = new List<Cadete>();
+            Nombre = "Cadeteria la prueba";
+            Cadete cadete= new(1,"as","asdasd");
+            Cadete cadete2= new(1,"as","asdasd");
+            ListaCadetes.Add(cadete);
+            ListaCadetes.Add(cadete2);
+
         }
 
-        public Cadeteria(string nombre, string telefono)
-        {
-            Nombre = nombre;
-            Telefono = telefono;
-            ListaCadetes = new();
-            ListaPedidos = new();
-        }
+
+
+
         public Cliente CrearCliente(string nombre, string telefono, string domicilio, string datosRef)
         {
             Cliente cliente = new(nombre, telefono, domicilio, datosRef);
@@ -46,18 +65,18 @@ namespace Web_Api
             var pedido = new Pedido(id, obs, cliente);
             return pedido;
         }
-        public string AsignarPedido(int idCadete, int idPedido)
+        public Pedido AsignarPedido(int idCadete, int idPedido)
         {//ponerle al pedido el id del cadete, nada mas
-            string respuesta = "Algo fallo el pedido no fue asignado";
+            Pedido pedidoV = new();
             foreach (var pedido in ListaPedidos)
             {
                 if (pedido.Id == idPedido)
                 {
                     pedido.IdCadete = idCadete;
-                    respuesta = "Pedido Asignado";
+                    return pedido;
                 }
             }
-            return respuesta;
+            return pedidoV;
         }
 
         public string CambiarEstado(int idPedido, Estados estado)
@@ -74,11 +93,11 @@ namespace Web_Api
             }
             return res;
         }
-        public string ReasignarPedido(int idPedido, int idCadeteNuevo)
+        public Pedido ReasignarPedido(int idPedido, int idCadeteNuevo)
         {
 
-            string respuesta = AsignarPedido(idCadeteNuevo, idPedido);
-            return respuesta;
+            var pedido = AsignarPedido(idCadeteNuevo, idPedido);
+            return pedido;
 
         }
 
@@ -87,19 +106,17 @@ namespace Web_Api
             Cadete cadete = new(id, nombre, telefono);
             ListaCadetes.Add(cadete);
         }
-        public string AñadirPedido(int id, string obs, string nombre, string telefono, string direccion, string datosRef)
+        public Pedido AñadirPedido(int id, string obs, string nombre, string telefono, string direccion, string datosRef)
         {
             Pedido pedido = CrearPedido(id, obs, nombre, telefono, direccion, datosRef);
-            string res = "Añadido con exito";
+
             if (pedido != null)
             {
                 ListaPedidos.Add(pedido);
             }
-            else
-            {
-                res = "No pudo ser añadido el pedido";
-            }
-            return res;
+
+
+            return pedido;
 
         }
 
