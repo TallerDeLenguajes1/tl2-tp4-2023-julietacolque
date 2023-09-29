@@ -12,16 +12,15 @@ namespace Web_Api
     public int IdCadete{get;set;}
 
     //constructor
-    public Pedido(int id,string observacion, Cliente cliente){
-      Id = id;
+    public Pedido(string observacion, Cliente cliente){
+      Id = 0;
       Observacion = observacion;
       Cliente = cliente;
-      Estado = Estados.EnCurso;
-      IdCadete = -1;
 
     }
 
     public Pedido(){
+  
       
     }
 

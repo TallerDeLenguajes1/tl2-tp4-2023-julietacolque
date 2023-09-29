@@ -49,18 +49,12 @@ public class CadeteriaController : ControllerBase
 
     }
     [HttpPost("AddPedido")]
-    public ActionResult<Pedido> AddPedido(int id, string obs, string nombre, string telefono, string direccion, string datosRef)
+    public ActionResult<Pedido> AddPedido([FromForm] Pedido pedido)
     {
 
-        var nuevoPedido = cadeteria.AñadirPedido(id, obs, nombre, telefono, direccion, datosRef);
-        if (nuevoPedido != null)
-        {
-            return Ok(nuevoPedido);
-        }
-        else
-        {
-            return BadRequest();
-        }
+        if (pedido == null) { return BadRequest(); }
+        var pedidoN = cadeteria.AñadirPedido(pedido);
+        return Ok(pedidoN);
 
 
     }
@@ -91,5 +85,31 @@ public class CadeteriaController : ControllerBase
         {
             return BadRequest();
         }
+    }
+
+    [HttpPut("CambiarEstadoPedido")]
+    public ActionResult<Pedido> CambiarEstado(int idP, Estados estado)
+    {
+        var pedido = cadeteria.CambiarEstado(idP, estado);
+        return Ok(pedido);
+    }
+
+    [HttpGet("Cadete/{id}")]
+    public ActionResult<Cadete> BuscarCadeteID(int id){
+    var cadete = cadeteria.ListaCadetes.FirstOrDefault(c=> c.Id == id);
+    return cadete;
+
+    }
+
+    [HttpGet("Cadete/Jornal/{id}")]
+    public ActionResult<float>JornalACobrar(int id){
+        return Ok(cadeteria.JornalACobrar(id));
+        
+    }
+
+    [HttpGet("Pedido/{id}")]
+    public ActionResult<Pedido>BuscarPedido(int id){
+        Pedido pedido = cadeteria.ListaPedidos.FirstOrDefault(p=>p.Id==id);
+        return pedido;
     }
 }

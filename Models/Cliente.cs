@@ -2,16 +2,16 @@ namespace Web_Api
 {
     public class Cliente
     {
-        public Cliente(string nombre, string telefono, string domicilio,string datosRef)
+        public Cliente(string nombre, int telefono, string domicilio,string datosRef)
         {
             Nombre = nombre;
             Telefono = telefono;
             Domicilio = domicilio;
             DatosReferenciaDireccion = datosRef;
         }
-
+        public Cliente(){}
         public string Nombre { get; set; }
-        public string Telefono { get; set; }
+        public int Telefono { get; set; }
 
         public string Domicilio { get; set; }
 

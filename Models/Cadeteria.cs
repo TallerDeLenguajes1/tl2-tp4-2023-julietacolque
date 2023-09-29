@@ -36,7 +36,7 @@ namespace Web_Api
         //     ListaPedidos = new();
         //     Cadete cadete= new(1,"as","asdasd");
         //     ListaCadetes.Add(cadete);
-            
+
         // }
 
         public Cadeteria()
@@ -44,25 +44,32 @@ namespace Web_Api
             ListaPedidos = new List<Pedido>();
             ListaCadetes = new List<Cadete>();
             Nombre = "Cadeteria la prueba";
-            Cadete cadete= new(1,"as","asdasd");
-            Cadete cadete2= new(1,"as","asdasd");
+            Cadete cadete = new(1, "juan", "3876");
+            Cadete cadete2 = new(2, "juanito", "381");
+            // Cliente cliente = new("raquel", 232323, "calle falsa123", "porton verde");
+            // Cliente cliente2 = new("perri", 232323, "santarosa", "porton negro");
+
             ListaCadetes.Add(cadete);
             ListaCadetes.Add(cadete2);
+            // Pedido pedido1 = new("2 hamburguesas", cliente);
+            // Pedido pedido2 = new("2 sandwich", cliente2);
+            // ListaPedidos.Add(pedido1);
+            // ListaPedidos.Add(pedido2);
 
         }
 
 
 
 
-        public Cliente CrearCliente(string nombre, string telefono, string domicilio, string datosRef)
+        public Cliente CrearCliente(string nombre, int telefono, string domicilio, string datosRef)
         {
             Cliente cliente = new(nombre, telefono, domicilio, datosRef);
             return cliente;
         }
-        public Pedido CrearPedido(int id, string obs, string nombre, string telefono, string direccion, string datosRef)
+        public Pedido CrearPedido(string obs, string nombre, int telefono, string direccion, string datosRef)
         {
             var cliente = new Cliente(nombre, telefono, direccion, datosRef);
-            var pedido = new Pedido(id, obs, cliente);
+            var pedido = new Pedido(obs, cliente);
             return pedido;
         }
         public Pedido AsignarPedido(int idCadete, int idPedido)
@@ -79,19 +86,11 @@ namespace Web_Api
             return pedidoV;
         }
 
-        public string CambiarEstado(int idPedido, Estados estado)
+        public Pedido CambiarEstado(int idPedido, Estados estado)
         {
-            string res = "pedido o cadete no encontrado";
-            foreach (var pedido in ListaPedidos)
-            {
-                if (pedido.Id == idPedido)
-                {
-                    pedido.Estado = estado;
-                    res = $"El estado del pedido {idPedido} ha sido modificado";
-                    break;
-                }
-            }
-            return res;
+            Pedido pedidoB = ListaPedidos.FirstOrDefault(p => p.Id == idPedido);
+            pedidoB.Estado = estado;
+            return pedidoB;
         }
         public Pedido ReasignarPedido(int idPedido, int idCadeteNuevo)
         {
@@ -106,39 +105,30 @@ namespace Web_Api
             Cadete cadete = new(id, nombre, telefono);
             ListaCadetes.Add(cadete);
         }
-        public Pedido AñadirPedido(int id, string obs, string nombre, string telefono, string direccion, string datosRef)
+        public Pedido AñadirPedido(Pedido pedido)
         {
-            Pedido pedido = CrearPedido(id, obs, nombre, telefono, direccion, datosRef);
-
-            if (pedido != null)
-            {
-                ListaPedidos.Add(pedido);
-            }
+            pedido.Id = ListaPedidos.Count() + 1;
+            pedido.IdCadete = -1;
+            pedido.Estado = Estados.EnCurso;
+            ListaPedidos.Add(pedido);
 
 
             return pedido;
 
         }
 
-        public List<Cadete> BuscarCadete(int idCadete)
+        public Cadete BuscarCadete(int idC)
         {
-            var cadetes = ListaCadetes.Where(x => x.Id == idCadete).ToList();
-            return cadetes;
+            var cadete = ListaCadetes.FirstOrDefault(c=> c.Id == idC);
+            return cadete;
 
         }
-
+        
         public float JornalACobrar(int idCadete)
         {
             float jornal = 500;
             int entregaRealizada = 0;
-            foreach (var pedido in ListaPedidos)
-            {
-                if (pedido.Estado == Estados.Entregado && pedido.IdCadete == idCadete)
-                {
-                    entregaRealizada++;
-                }
-            }
-
+            entregaRealizada = ListaPedidos.Count(p=>p.Estado==Estados.Entregado && p.IdCadete==idCadete);
             return jornal * entregaRealizada;
         }
 
