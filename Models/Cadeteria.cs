@@ -10,34 +10,19 @@ namespace Web_Api
 
         public List<Cadete> ListaCadetes { get; set; }
         public List<Pedido> ListaPedidos { get; set; }
-
-
+        public AccesoADatosPedidos AccesoPedido { get; set; }
+        public AccesoADatosCadeteria AccesoCadeteria { get; set; }
         public static Cadeteria GetCadeteria()
         { //Sirve para crear una unica instancia de la clase cadeteria para que perduren los datos.Cuando se ejecuta una vez la aplicacion la instancia queda creada para el resto de vida de la app.
-            if (CadeteriaSingleton == null)
+            if(CadeteriaSingleton == null)
             {
-                CadeteriaSingleton = new Cadeteria();
+                CadeteriaSingleton = AccesoADatosCadeteria.Obtener("Cadeteria.json");
+                    
             }
 
             return CadeteriaSingleton;
         }
 
-        // public Cadeteria()
-        // {
-        //     ListaPedidos = new();
-        //     ListaCadetes = new();
-        // }
-
-        // public Cadeteria(string nombre, string telefono)
-        // {
-        //     Nombre = nombre;
-        //     Telefono = telefono;
-        //     ListaCadetes = new();
-        //     ListaPedidos = new();
-        //     Cadete cadete= new(1,"as","asdasd");
-        //     ListaCadetes.Add(cadete);
-
-        // }
 
         public Cadeteria()
         {
@@ -46,15 +31,10 @@ namespace Web_Api
             Nombre = "Cadeteria la prueba";
             Cadete cadete = new(1, "juan", "3876");
             Cadete cadete2 = new(2, "juanito", "381");
-            // Cliente cliente = new("raquel", 232323, "calle falsa123", "porton verde");
-            // Cliente cliente2 = new("perri", 232323, "santarosa", "porton negro");
-
             ListaCadetes.Add(cadete);
             ListaCadetes.Add(cadete2);
-            // Pedido pedido1 = new("2 hamburguesas", cliente);
-            // Pedido pedido2 = new("2 sandwich", cliente2);
-            // ListaPedidos.Add(pedido1);
-            // ListaPedidos.Add(pedido2);
+
+
 
         }
 
@@ -119,16 +99,16 @@ namespace Web_Api
 
         public Cadete BuscarCadete(int idC)
         {
-            var cadete = ListaCadetes.FirstOrDefault(c=> c.Id == idC);
+            var cadete = ListaCadetes.FirstOrDefault(c => c.Id == idC);
             return cadete;
 
         }
-        
+
         public float JornalACobrar(int idCadete)
         {
             float jornal = 500;
             int entregaRealizada = 0;
-            entregaRealizada = ListaPedidos.Count(p=>p.Estado==Estados.Entregado && p.IdCadete==idCadete);
+            entregaRealizada = ListaPedidos.Count(p => p.Estado == Estados.Entregado && p.IdCadete == idCadete);
             return jornal * entregaRealizada;
         }
 
